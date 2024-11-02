@@ -144,4 +144,21 @@ export const promesa = new Promise((resolve, reject) => {
     }, 3000);
 });
 
+const detalle=[
+    {
+        id:'A01',
+        name: 'Amelie',
+        tipo: 'aros',
+        descripcion: 'Plata 925 colgante',
+        stock: 15,
+        precio: 25000,
+        img: "https://i.pinimg.com/564x/68/01/de/6801de9c19055474c3f6d5c45dbc44fc.jpg"
+    }
+];
+
+export const promesaDetalle = new Promise((resolve, reject) => {
+    setTimeout(() => {
+    resolve(detalle);
+    }, 2000);
+})
 

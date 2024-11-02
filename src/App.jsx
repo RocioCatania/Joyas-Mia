@@ -5,6 +5,7 @@ import './App.css';
 import ItemListConteiner from './components/ItemListConteiner/ItemListConteiner';
 import NavBar from './components/navBar/Navbar';
 import ItemList from './components/ItemListConteiner/ItemList';
+import ItemDetailConteiner from './components/ItemDetailConteiner/ItemDetailConteiner';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
     
     <ItemListConteiner greeting= "Encontraste las mejores Joyas en Plata"/>
     <ItemList/>
+    <ItemDetailConteiner/>
     </>
   );
 };

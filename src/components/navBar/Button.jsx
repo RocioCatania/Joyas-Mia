@@ -1,6 +1,4 @@
 
-
-
 const Button = ({ texto }) => {
 return ( 
     <div>
