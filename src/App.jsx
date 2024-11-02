@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css';
 import ItemListConteiner from './components/ItemListConteiner/ItemListConteiner';
 import NavBar from './components/navBar/Navbar';
-
+import ItemList from './components/ItemListConteiner/ItemList';
 
 function App() {
   return (
@@ -14,8 +14,7 @@ function App() {
     
     
     <ItemListConteiner greeting= "Encontraste las mejores Joyas en Plata"/>
-    
-
+    <ItemList/>
     </>
   );
 };
