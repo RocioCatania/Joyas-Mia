@@ -1,11 +1,13 @@
-import Logo from '../../assets/img/logo.png';
+import Logo from '../../assets/img/Logo.png';
 import './Brand.css';
 
-const Brand = () => {
+const Brand = ({Logo , children} ) => {
     return ( 
         <div className="logo border border-warning rounded-5">
-        <img  className = "rounded-5" src= {Logo} alt="logo" />
-        
+        <a href="">
+        <img  className = "rounded-5" src= {Logo} alt="logo"  />
+        {children}
+        </a>
         </div>
     );
 };
