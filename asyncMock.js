@@ -2,7 +2,7 @@ const productos = [
     {
         id:'A01',
         name: 'Amelie',
-        tipo: 'aros',
+        tipo: 'Aros',
         descripcion: 'Plata 925 colgante',
         stock: 15,
         precio: 25000,
@@ -11,7 +11,7 @@ const productos = [
     {
         id:'A02',
         name: 'Isabella',
-        tipo: 'aros',
+        tipo: 'Aros',
 
         descripcion: 'Plata 925 colgante triple',
         stock: 21,
@@ -21,7 +21,7 @@ const productos = [
     {
         id:'A03',
         name: 'Alma',
-        tipo: 'aros',
+        tipo: 'Aros',
 
         descripcion: 'Plata 925 colgante cubano',
         stock: 35,
@@ -31,7 +31,7 @@ const productos = [
     {
         id:'A04',
         name: 'Mia',
-        tipo: 'aros',
+        tipo: 'Aros',
         descripcion: 'Plata 925 colgante con stras cubic',
         stock: 10,
         precio: 27000,
@@ -40,7 +40,7 @@ const productos = [
     {
         id:'A05',
         name: 'Abril',
-        tipo: 'aros',
+        tipo: 'Aros',
         descripcion: 'Plata 925 colgante con stras cubic en Mariposa',
         stock: 19,
         precio: 35000,
@@ -49,7 +49,7 @@ const productos = [
     {
         id:'C01',
         name: 'Diamante',
-        tipo: 'collares',
+        tipo: 'Collares',
         descripcion: 'Plata 925 Diamante',
         stock: 10,
         precio: 225000,
@@ -58,7 +58,7 @@ const productos = [
     {
         id:'C02',
         name: 'Perla',
-        tipo: 'collares',
+        tipo: 'Collares',
         descripcion: 'Perlas Importadas',
         stock: 9,
         precio: 329000,
@@ -67,7 +67,7 @@ const productos = [
     {
         id:'C03',
         name: 'Corazon',
-        tipo: 'collares',
+        tipo: 'Collares',
         descripcion: 'Plata 925 colganntes Corazon doble',
         stock: 8,
         precio: 145000,
@@ -76,7 +76,7 @@ const productos = [
     {
         id:'C04',
         name: 'Rombo',
-        tipo: 'collares',
+        tipo: 'Collares',
         descripcion: 'Plata 925 colgante con stras cubic gota doble',
         stock: 12,
         precio: 227000,
@@ -85,7 +85,7 @@ const productos = [
     {
         id:'C05',
         name: 'Destello',
-        tipo: 'collares',
+        tipo: 'Collares',
         descripcion: 'Plata 925 colgante con piedra cubic rojo',
         stock: 25,
         precio: 235000,
@@ -94,7 +94,7 @@ const productos = [
     {
         id:'AN01',
         name: 'Mar',
-        tipo: 'anillos',
+        tipo: 'Anillos',
         descripcion: 'Plata 925 Diamante',
         stock: 25,
         precio: 150000,
@@ -103,7 +103,7 @@ const productos = [
     {
         id:'AN02',
         name: 'Oceano',
-        tipo: 'anillos',
+        tipo: 'Anillos',
         descripcion: 'Perlas Importadas',
         stock: 26,
         precio: 190000,
@@ -112,7 +112,7 @@ const productos = [
     {
         id:'AN03',
         name: 'Rio',
-        tipo: 'anillos',
+        tipo: 'Anillos',
         descripcion: 'Plata 925 colganntes Corazon doble',
         stock: 28,
         precio: 145000,
@@ -121,7 +121,7 @@ const productos = [
     {
         id:'AN04',
         name: 'Cascada',
-        tipo: 'anillos',
+        tipo: 'Anillos',
         descripcion: 'Plata 925 colgante con stras cubic rombo doble',
         stock: 14,
         precio: 170000,
@@ -130,7 +130,7 @@ const productos = [
     {
         id:'AN05',
         name: 'Olas',
-        tipo: 'anillos',
+        tipo: 'Anillos',
         descripcion: 'Plata 925 colgante con piedra cubic',
         stock: 31,
         precio: 125000,
@@ -162,3 +162,8 @@ export const promesaDetalle = new Promise((resolve, reject) => {
     }, 2000);
 })
 
+
+
+export const getProduct = (id) => {
+    return productos.find((prod) => prod.id == id);
+};

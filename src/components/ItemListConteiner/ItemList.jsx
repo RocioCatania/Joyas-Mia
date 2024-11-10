@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import ItemCount from "./ItemCount";
 import Item from "./Item";
 import { promesa } from "../../../asyncMock";
 

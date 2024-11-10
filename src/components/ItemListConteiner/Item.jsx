@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 
 export default function Item ({product}) {
     return (
@@ -9,7 +9,9 @@ export default function Item ({product}) {
             </div>
         <h3>{product.name}</h3>
         <p>${product.precio}.- </p>
-        <button className= "btn btn-outline-warning mx-4">Ver mas</button>
+        <button className= "btn btn-outline-warning mx-4 ">
+        <Link to={`/product/${product.id}`} className="text-decoration-none text-dark">Más Detalles</Link>
+            </button>
         </section>
         </>
     )

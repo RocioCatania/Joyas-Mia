@@ -10,6 +10,7 @@ import ArosContain from './components/ArosCointain';
 import CollaresContain from './components/CollaresContain';
 import AnillosContain from './components/AnillosContain';
 import CartWidget from './components/navBar/CartWidget';
+import ItemDetailConteiner from './components/ItemDetailConteiner/ItemDetailConteiner';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route exact path="/" element= {<ItemList/>}/>
           <Route exact path="/Aros" element= {<ArosContain/>}/>
+          <Route exact path="/product/:Id" element= {<ItemDetailConteiner/>}/>
           <Route exact path="/Collares" element= {<CollaresContain/>}/>
           <Route exact path="/Anillos" element= {<AnillosContain/>}/>
           <Route exact path="/Cart" element= {<CartWidget/>}/>

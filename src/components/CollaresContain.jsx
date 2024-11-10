@@ -19,7 +19,7 @@ export default function CollaresContain() {
             <h2>Collares de Plata 925</h2>
             <section className="d-flex justify-content-between item-align-center row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
                 {Product
-                    .filter((product) => product.tipo === 'collares')
+                    .filter((product) => product.tipo === 'Collares')
                     .map((product) => (
                         <Item product={product} key={product.id} />
                     ))}
