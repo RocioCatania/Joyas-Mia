@@ -1,17 +1,19 @@
 import { useParams } from "react-router-dom"
-import { getProduct } from "../../../asyncMock";
+import { productoEspecifico } from "../../firebase/firebase";
 import { useEffect, useState } from "react";
 import ItemCount from "./ItemCount";
 
 
 export default function ItemDetailConteiner () {
-    const {Id} = useParams();
+    const {id} = useParams();
 
     const [product,setProduct]=useState({});
 
     useEffect(()=>{
-        setProduct(getProduct(Id));
-    },[]);
+        productoEspecifico(id).then((product) =>
+            setProduct(product)
+        );
+    },[id]);
 
     return(<>
     <div className="d-flex justify-content-center align-items-center">

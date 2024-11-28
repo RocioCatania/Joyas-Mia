@@ -6,9 +6,7 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
     return ( 
         <nav className=' contenedorNav d-flex justify-content-between align-items-center'>
-            <Brand>
-            <Link to= {"/"} className='text-decoration-none text-dark'></Link>
-            </Brand>
+            <Brand/>
             <div className='d-flex flex-row justify-content-around '>
             <button  className= "btn btn-outline-warning mx-4 ">
                 <Link to= {"/Aros"} className='text-decoration-none text-dark'>Aros</Link> </button>

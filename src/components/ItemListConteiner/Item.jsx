@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 
+
 export default function Item ({product}) {
+
     return (
         <>
         <section className="w-25 rounded border border-warning-subtle border border-3 m-3 p-3 ">

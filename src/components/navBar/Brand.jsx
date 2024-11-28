@@ -1,16 +1,17 @@
 import './Brand.css';
+import { Link } from 'react-router-dom';
 
-
-const Brand = ({children} )  => {
-    return ( 
+const Brand = ({ children }) => {
+    return (
         <div className="logo border border-warning rounded-5">
-        <a href="">
-        <img  className = "rounded-5" src="https://www.canva.com/design/DAGT-vyrth8/ommuWG4wHQ3I2YG-CT5jJw/view" alt="logo"  />
-        {children}
-        </a>
+            <Link to="/">
+                <img className="rounded-5" src="https://i.pinimg.com/736x/4e/5c/bb/4e5cbba557e890adf0274baae14ea1fd.jpg" alt="Logo de la marca" />
+                {children}
+            </Link>
         </div>
     );
 };
 
 export default Brand;
+
 
