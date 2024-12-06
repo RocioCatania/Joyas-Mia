@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import Item from "./ItemListConteiner/Item";
+import Item from "./Item";
 import { filtro } from "../firebase/firebase";
 
 

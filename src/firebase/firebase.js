@@ -8,6 +8,7 @@ import { getFirestore,
         query
     } from "firebase/firestore";
 
+    export {collection}
 
 
 
@@ -24,6 +25,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const baseDeDatos = getFirestore(app);
+
+export default baseDeDatos;
+
+
 
 //para consumir un producto
 

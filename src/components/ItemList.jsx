@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Item from "./Item";
-import {coleccionCompleta} from "../../firebase/firebase";
+import {coleccionCompleta} from "../firebase/firebase";
 
 export default function ItemList (){
 

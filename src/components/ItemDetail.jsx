@@ -1,19 +1,27 @@
-import { useParams } from "react-router-dom"
-import { productoEspecifico } from "../../firebase/firebase";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import ItemCount from "./ItemCount";
+import { ProductsContext } from "./context/ProductsContext";
+import { useState } from "react";
+
+export default function ItemDetail ({product}) {
+    
+    const {carrito,agregarAlCarrito} = useContext(ProductsContext);
+    
+const [cantidad, setCantidad] = useState(1);
+
+const handleSumar = () => {
+    cantidad < product.stock && setCantidad(cantidad + 1)
+};
 
 
-export default function ItemDetailConteiner () {
-    const {id} = useParams();
+const handleRestar = () => {
+cantidad > 1 && setCantidad(cantidad - 1);
+    
+};
 
-    const [product,setProduct]=useState({});
 
-    useEffect(()=>{
-        productoEspecifico(id).then((product) =>
-            setProduct(product)
-        );
-    },[id]);
+
+
 
     return(<>
     <div className="d-flex justify-content-center align-items-center">
@@ -28,7 +36,13 @@ export default function ItemDetailConteiner () {
                     <p>{product.descripcion} </p>
                     <p> stock:{product.stock} </p>
                     <p className="text-danger">Pagos por Transferencias Bancarias 10% de descuento</p>
-                    <ItemCount max= {product.stock}/>
+                    <ItemCount  max= {product.stock}
+                    cantidad={cantidad}
+                    handleSumar={handleSumar}
+                    handleRestar={handleRestar}
+                    handleAgregar={()=>{agregarAlCarrito(product,cantidad)}}
+
+                    />
                 </div>
             </article> 
     </section>
