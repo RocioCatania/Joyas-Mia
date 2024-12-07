@@ -42,6 +42,7 @@ useEffect(()=>{
     return (
         <ProductsContext.Provider value={ {
             carrito,
+            setCarrito,
             agregarAlCarrito,
             cantidadEnCarrito,
             precioTotal,

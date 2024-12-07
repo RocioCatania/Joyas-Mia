@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
-import Aos from "aos"
+import { motion} from "framer-motion";
+
 
 export default function Item ({product}) {
 
@@ -7,7 +8,9 @@ export default function Item ({product}) {
         <>
         <section className="w-25 rounded border border-warning-subtle border border-3 m-3 p-3 " data-aos="flip-up">
             <div className=" w-100 h-75">
-            <img  className="w-100 h-100" src={product.img} alt="" />
+            <motion.div layoutId="modal" >
+            <img  className="w-100 h-100"  src={product.img} alt="" />
+            </motion.div>
             </div>
         <h3>{product.name}</h3>
         <p>${product.precio}.- </p>

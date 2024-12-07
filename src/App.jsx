@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css';
 import NavBar from './components/Navbar';
 import ItemList from './components/ItemList';
@@ -12,7 +9,8 @@ import ItemDetailConteiner from './components/ItemDetailConteiner';
 import Formulario from './components/Formulario';
 import Carrito from './components/Carrito';
 import  {ProductsProvider} from './components/context/ProductsContext';
-import  {Footer}  from './components/Footer';
+import {Footer} from "./components/Footer"
+
 
 function App() {
 
