@@ -16,7 +16,7 @@ export default function ItemDetailConteiner () {
     },[id]);
 
     return(<>
-    <div className="d-flex justify-content-center align-items-center">
+    <div className="d-flex justify-content-center align-items-center"data-aos="flip-left" >
 
     {product && <ItemDetail product={product}/>}
     </div>

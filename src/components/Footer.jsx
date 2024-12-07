@@ -1,9 +1,9 @@
-
+import './CartWidget.css';
 
 export const Footer = ()=> {
     return (
         <>
-        <section className="d-flex m-5 p-5 justify-content-between"> 
+        <section className="footer d-flex  p-5 justify-content-between"> 
             <div>
                 <h2>JOYAS MIA</h2>
                 <p>Creamos joyas que generan conexiones <br/>con el alma, dándole a cada una un significado<br/> que nos conecten nos la vida, con el universo <br/>y con nosotras mismas.</p>

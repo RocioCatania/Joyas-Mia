@@ -18,7 +18,7 @@ const handleVaciar = () => {
             {
             carrito.map((prod, index)=>{
                 return(
-                    <div  className="d-flex flex-column align-items-center m-5">
+                    <div  className="d-flex flex-column align-items-center m-5" data-aos="zoom-in">
                         <div key={prod.id || index} className="  d-flex justify-content-around w-50 border-3 rounded border border-warning-subtle m-3 " >
                             <img className="w-25 h-75 m-3" src={prod.img} alt="" /> 
                         <div  className=" m-3">

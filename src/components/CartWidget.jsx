@@ -10,8 +10,8 @@ const CartWidget = () => {
 
     return ( 
         <div className="carrito">
-        <Link className="text-decoration-none text-dark " to= "/carrito"><img src= {carrito} alt="carrito"  />
-        <span >{cantidadEnCarrito()}</span>
+        <Link className=" d-flex text-decoration-none text-dark  " to= "/carrito"><img src= {carrito} alt="carrito"  />
+        <span  className="numerito ">{cantidadEnCarrito()}</span>
             </Link>
         </div>
     );
