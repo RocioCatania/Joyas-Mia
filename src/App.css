@@ -1,6 +1,11 @@
+
+
 #root {
   max-width: 1440px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0 ;
+  padding: 2 rem;
   text-align: center;
+font-family: Arapey, serif;
+background-color:#fdf8ed;
 }
+

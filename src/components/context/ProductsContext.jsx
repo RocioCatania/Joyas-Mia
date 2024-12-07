@@ -9,20 +9,12 @@ export const ProductsProvider = ({children}) => {
 
     const [carrito,setCarrito]=useState(carritoInicial);
 
+    const agregarAlCarrito = (product,cantidad,) => {
 
-const agregarAlCarrito = (product, cantidad) => {
-    const prodAgregado = { ...product, cantidad };
+const prodAgregado= {...product,cantidad};
 
-    const nuevoCarrito= [...carrito];
-    const estaEnElCarrito = nuevoCarrito.find((producto) => producto.id === prodAgregado.id);
+setCarrito([...carrito,prodAgregado]);
 
-    if (estaEnElCarrito) {
-        estaEnElCarrito.cantidad += cantidad;
-
-} else {
-    nuevoCarrito.push(prodAgregado);
-}
-    setCarrito(nuevoCarrito);
 };
 
 const cantidadEnCarrito = () => {

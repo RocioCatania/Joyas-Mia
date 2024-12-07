@@ -12,7 +12,7 @@ import ItemDetailConteiner from './components/ItemDetailConteiner';
 import Formulario from './components/Formulario';
 import Carrito from './components/Carrito';
 import  {ProductsProvider} from './components/context/ProductsContext';
-
+import  {Footer}  from './components/Footer';
 
 function App() {
 
@@ -32,6 +32,7 @@ function App() {
           <Route exact path="/carrito" element= {<Carrito/>}/>
           <Route exact path="/formulario" element= {<Formulario/>}/>
         </Routes>
+        <Footer/>
     </BrowserRouter>
     </ProductsProvider>
     
