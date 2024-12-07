@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 
 export default function Formulario() {
-    const { carrito, precioTotal } = useContext(ProductsContext); 
+    const { carrito, precioTotal, vaciarCarrito } = useContext(ProductsContext); 
     const pedidosRef = collection(baseDeDatos, "pedidos");
     const { register, handleSubmit } = useForm();
     const navigate = useNavigate(); 
@@ -27,14 +27,14 @@ export default function Formulario() {
         try {
         const docRef = await addDoc(pedidosRef, pedido);
                 setPedidoId(docRef.id);
-            
+            vaciarCarrito();
             Swal.fire({
                 position: "top-end",
                 icon: "success",
                 text: "Sus Datos fueron enviados correctamente",
                 title: "¡Compra Exitosa!",
                 showConfirmButton: false,
-                timer: 2000,
+                timer: 1500,
             });
         } catch (error) {
             console.error("Error al enviar el pedido:", error);
@@ -56,7 +56,7 @@ export default function Formulario() {
                 <h4 className="m-3">Su numero de pedido es: {pedidoId}</h4>
                 <h3 className="m-3">Guardelo para cualquier consulta</h3>
                 <br/>
-                <Link className= "btn btn-outline-warning mx-4 " to="/">Seguir Comprando</Link>
+                <Link className= "btn btn-outline-warning mx-4 m-5" to="/">Seguir Comprando</Link>
 
             </div>
         )
@@ -71,18 +71,21 @@ export default function Formulario() {
                 <input
                     className="m-3 w-75 placeholder col-12 bg-warning"
                     type="text"
+                    required
                     placeholder="Nombre y Apellido"
                     {...register("nombre")}
                 />
                 <input
                     className="m-3 w-75 placeholder col-12 bg-warning"
                     type="email"
+                    required
                     placeholder="Email"
                     {...register("email")}
                 />
                 <input
                     className="m-3 w-75 placeholder col-12 bg-warning"
                     type="tel"
+                    required
                     placeholder="Telefono"
                     {...register("telefono")}
                 />
