@@ -11,43 +11,15 @@ import AnillosContain from './components/AnillosContain';
 import ItemDetailConteiner from './components/ItemDetailConteiner';
 import Formulario from './components/Formulario';
 import Carrito from './components/Carrito';
-import { ProductsContext} from './components/context/ProductsContext';
+import  {ProductsProvider} from './components/context/ProductsContext';
+
 
 function App() {
-const [carrito,setCarrito]=useState([]);
 
-
-const agregarAlCarrito = (product, cantidad) => {
-  const prodAgregado = { ...product, cantidad };
-  
-  const nuevoCarrito= [...carrito];
-  const estaEnElCarrito = nuevoCarrito.find((producto) => producto.id === prodAgregado.id);
-
-  if (estaEnElCarrito) {
-      estaEnElCarrito.cantidad += cantidad;
-
-  } else {
-      nuevoCarrito.push(prodAgregado);
-  }
-  setCarrito(nuevoCarrito);
-  console.log(nuevoCarrito)
-};
-
-const cantidadEnCarrito = () => {
-return carrito.reduce((acc,prod) => acc + prod.cantidad,0);
-};
-
- const precioTotal = () => {
-  return carrito.reduce((acc,prod)=> acc + prod.precio * prod.cantidad,0);
- };
-
- const vaciarCarrito = () => {
-  setCarrito([]);
- }
 
   return (
     <>
-    <ProductsContext.Provider value={{carrito,agregarAlCarrito, cantidadEnCarrito, precioTotal,vaciarCarrito}}>
+    <ProductsProvider>
     <BrowserRouter>
     <NavBar/>
         <Routes>
@@ -61,7 +33,7 @@ return carrito.reduce((acc,prod) => acc + prod.cantidad,0);
           <Route exact path="/formulario" element= {<Formulario/>}/>
         </Routes>
     </BrowserRouter>
-    </ProductsContext.Provider>
+    </ProductsProvider>
     
     </>
   );
